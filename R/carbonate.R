@@ -27,9 +27,15 @@
 
   path <- normalizePath(path,mustWork = FALSE)
   
+  device <- gsub("^(.*?)\\.", "", basename(file))
+  
   if(!dir.exists(path)){
     message(sprintf('creating directory: %s', path))
     dir.create(path)
+  }
+  
+  if (file.exists(file.path(path, sprintf("carbon.%s", device)))) {
+    unlink(file.path(path, sprintf("carbon.%s", device)), force = TRUE)
   }
     
   if (is.null(rD)) {
@@ -63,33 +69,22 @@
     )
   )
 
-  device <- gsub("^(.*?)\\.", "", basename(file))
-
   remDr$navigate(this_uri)
   
   asyncr(remDr,
     using = "xpath",
-    value = '//*[@id="__next"]/main/div[3]/div/div[1]/div[5]/div',
+    value = '//*[@id="__next"]/main/div[3]/div/div[1]/div[5]/div/div/button',
     maxiter = self$maxiter
   )
 
   asyncr(remDr,
     using = "xpath",
-    value = sprintf('//*[@id="downshift-2-item-%s"]', as.numeric(device == "svg")),
+    value = sprintf('//*[@id="__next"]/main/div[3]/div/div[1]/div[5]/div/div[2]/div[4]/div/div/button[%s]', which(device%in%c('png','svg'))),
     maxiter = self$maxiter
   )
 
-  if (file.exists(file.path(path, sprintf("carbon.%s", device)))) {
-    unlink(file.path(path, sprintf("carbon.%s", device)), force = TRUE)
-  }
-
-  file_found <- FALSE
-
-  while (!file_found) {
-    Sys.sleep(0.05)
-    file_found <- file.exists(file.path(path, sprintf("carbon.%s", device)))
-  }
-
+  file.timeout(path,device)
+  
   if (file.exists(file.path(path, sprintf("rcarbon.%s", device)))) {
     unlink(file.path(path, sprintf("rcarbon.%s", device)), force = TRUE)
   }
