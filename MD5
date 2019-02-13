@@ -1,9 +1,9 @@
-ced17450f810b802a520206353840cbb *DESCRIPTION
+28545c524a63e0776b3d8eff006c96f0 *DESCRIPTION
 81dbe6cd88eeeeda9c7db7cbf927cf0d *LICENSE
 074b899e8f6be73c29055aae4a95012d *NAMESPACE
 7a9a90b76b3e366076c9dd63c842875a *R/carbon.R
 7d08ab93093b13c020254599ce479e26 *R/carbon_fields.R
-d82ea41ba577598abcaed49cee29dfaa *R/carbonate.R
+bc67038f3743834cf0dfd0d93f8c3b9b *R/carbonate.R
 7c1ed56a77dde1288eed348add6edaa9 *R/helpers.R
 deb2f931b8678f951264fcb8ee24c102 *R/selenium_functions.R
 1d4aa1dc1e10031e3ffc4ab46ea96330 *R/set_get_functions.R
@@ -12,7 +12,7 @@ d5dd313c5763890719f81fca16380825 *R/uri_functions.R
 8759d56fd8768e821f7d046581def17d *build/vignette.rds
 f6748f19f44390a530f47160351f02c1 *inst/doc/tests_and_coverage.R
 1ab2ca872bc41e63ccd013d8a3f4bf8b *inst/doc/tests_and_coverage.Rmd
-1dde9dae9f2567951a04f9329485e40b *inst/doc/tests_and_coverage.html
+d3e03e10db863f6d8d1d0f06ef25c02c *inst/doc/tests_and_coverage.html
 b7fbcdc18f5c5ad38755eb18a6fd65b4 *inst/figures/hex_black_small.png
 eb32c509d8dba53044232d2269d92a52 *man/browse.Rd
 a212f4cd755044a2d271289100d10e18 *man/carbon.Rd
@@ -42,6 +42,6 @@ b8a4c27cd6a831834c268898ff2376ac *man/uri.Rd
 5e0d64c79853d2610d2f3e240c6c3cf9 *tests/testthat.R
 5c50e8c3c8a147537db746134fc2640b *tests/testthat/helpers.R
 bd3721d9e390f96efb1d4f693d41ff2e *tests/testthat/test-set.R
-fe23cdf00ff6a5986e51b5034534282a *tests/testthat/test-uri.R
+fe26c4fa3fac0afabf746d682cd5188b *tests/testthat/test-uri.R
 716f8d17e423b84337d8c732c62a6c7c *tests/testthat/test-yml.R
 1ab2ca872bc41e63ccd013d8a3f4bf8b *vignettes/tests_and_coverage.Rmd
