@@ -8,11 +8,35 @@
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
 
 <title>Tests and Coverage</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
 
 
 
@@ -29,9 +53,6 @@ padding-right: 2em;
 font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-size: 14px;
 line-height: 1.35;
-}
-#header {
-text-align: center;
 }
 #TOC {
 clear: both;
@@ -200,7 +221,8 @@ code > span.st { color: #d14; }
 code > span.co { color: #888888; font-style: italic; } 
 code > span.ot { color: #007020; } 
 code > span.al { color: #ff0000; font-weight: bold; } 
-code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
 </style>
 
 
@@ -214,16 +236,24 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 
 
 <h1 class="title toc-ignore">Tests and Coverage</h1>
-<h4 class="date">06 February, 2020 19:08:54</h4>
+<h4 class="date">25 August, 2022 21:27:41</h4>
 
 
 
 <!--- Placeholder for tests/README.md Do Not Edit--->
-<p>This output is created by <a href="https://github.com/metrumresearchgroup/covrpage">covrpage</a>.</p>
+<ul>
+<li><a href="#coverage" id="toc-coverage">Coverage</a></li>
+<li><a href="#unit-tests" id="toc-unit-tests">Unit Tests</a></li>
+</ul>
+<p>This output is created by <a href="https://github.com/yonicd/covrpage">covrpage</a>.</p>
 <div id="coverage" class="section level2">
 <h2>Coverage</h2>
 <p>Coverage summary is created using the <a href="https://github.com/r-lib/covr">covr</a> package.</p>
 <table>
+<colgroup>
+<col width="79%" />
+<col width="20%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Object</th>
@@ -233,30 +263,30 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <tbody>
 <tr class="odd">
 <td align="left">carbonate</td>
-<td align="center">48.58</td>
+<td align="center">51.46</td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/R/carbonate.R">R/carbonate.R</a></td>
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/R/carbonate.R">R/carbonate.R</a></td>
 <td align="center">0.00</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/R/selenium_functions.R">R/selenium_functions.R</a></td>
-<td align="center">0.00</td>
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/R/selenium_functions.R">R/selenium_functions.R</a></td>
+<td align="center">20.00</td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/R/uri_functions.R">R/uri_functions.R</a></td>
-<td align="center">52.63</td>
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/R/uri_functions.R">R/uri_functions.R</a></td>
+<td align="center">38.60</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/R/carbon.R">R/carbon.R</a></td>
-<td align="center">64.29</td>
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/R/carbon.R">R/carbon.R</a></td>
+<td align="center">60.61</td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/R/helpers.R">R/helpers.R</a></td>
-<td align="center">70.09</td>
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/R/helpers.R">R/helpers.R</a></td>
+<td align="center">76.64</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/R/set_get_functions.R">R/set_get_functions.R</a></td>
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/R/set_get_functions.R">R/set_get_functions.R</a></td>
 <td align="center">100.00</td>
 </tr>
 </tbody>
@@ -266,7 +296,17 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <div id="unit-tests" class="section level2">
 <h2>Unit Tests</h2>
 <p>Unit Test summary is created using the <a href="https://github.com/r-lib/testthat">testthat</a> package.</p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="42%" />
+<col width="5%" />
+<col width="7%" />
+<col width="7%" />
+<col width="9%" />
+<col width="10%" />
+<col width="10%" />
+<col width="6%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">file</th>
@@ -281,9 +321,9 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-set.R">test-set.R</a></td>
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-port.R">test-port.R</a></td>
 <td align="right">3</td>
-<td align="right">0.013</td>
+<td align="right">0.024</td>
 <td align="right">0</td>
 <td align="right">0</td>
 <td align="right">0</td>
@@ -291,19 +331,29 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-uri.R">test-uri.R</a></td>
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-set.R">test-set.R</a></td>
+<td align="right">3</td>
+<td align="right">0.893</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-uri.R">test-uri.R</a></td>
 <td align="right">8</td>
-<td align="right">1.352</td>
+<td align="right">1.342</td>
 <td align="right">0</td>
 <td align="right">0</td>
-<td align="right">1</td>
+<td align="right">2</td>
 <td align="right">0</td>
 <td align="left">🔶</td>
 </tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-yml.R">test-yml.R</a></td>
+<tr class="even">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-yml.R">test-yml.R</a></td>
 <td align="right">6</td>
-<td align="right">0.017</td>
+<td align="right">2.351</td>
 <td align="right">0</td>
 <td align="right">0</td>
 <td align="right">0</td>
@@ -313,8 +363,19 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 </tbody>
 </table>
 <details open>
-<p><summary> Show Detailed Test Results </summary></p>
+<summary>
+Show Detailed Test Results
+</summary>
 <table>
+<colgroup>
+<col width="34%" />
+<col width="7%" />
+<col width="35%" />
+<col width="7%" />
+<col width="4%" />
+<col width="5%" />
+<col width="5%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">file</th>
@@ -328,25 +389,52 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-set.R#L8">test-set.R</a></td>
-<td align="left">set_</td>
-<td align="left">set functions: set_template</td>
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-port.R#L9">test-port.R</a></td>
+<td align="left">port</td>
+<td align="left">port: init</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
 <td align="right">0.011</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-set.R#L13">test-set.R</a></td>
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-port.R#L14">test-port.R</a></td>
+<td align="left">port</td>
+<td align="left">port: reset</td>
+<td align="left">PASS</td>
+<td align="right">1</td>
+<td align="right">0.011</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-port.R#L19">test-port.R</a></td>
+<td align="left">port</td>
+<td align="left">port: manual</td>
+<td align="left">PASS</td>
+<td align="right">1</td>
+<td align="right">0.002</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-set.R#L8">test-set.R</a></td>
+<td align="left">set_</td>
+<td align="left">set functions: set_template</td>
+<td align="left">PASS</td>
+<td align="right">1</td>
+<td align="right">0.529</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-set.R#L13">test-set.R</a></td>
 <td align="left">set_</td>
 <td align="left">set functions: set_font_family</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.001</td>
+<td align="right">0.363</td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-set.R#L18">test-set.R</a></td>
+<tr class="even">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-set.R#L18">test-set.R</a></td>
 <td align="left">set_</td>
 <td align="left">set functions: set_windows_control_theme</td>
 <td align="left">PASS</td>
@@ -354,35 +442,35 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <td align="right">0.001</td>
 <td align="left"></td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-uri.R#L9">test-uri.R</a></td>
+<tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-uri.R#L9">test-uri.R</a></td>
 <td align="left">uri</td>
 <td align="left">options: benchmark</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.002</td>
+<td align="right">0.325</td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-uri.R#L17">test-uri.R</a></td>
+<tr class="even">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-uri.R#L17">test-uri.R</a></td>
 <td align="left">uri</td>
 <td align="left">uri: benchmark</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.002</td>
+<td align="right">0.235</td>
 <td align="left"></td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-uri.R#L21">test-uri.R</a></td>
+<tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-uri.R#L21">test-uri.R</a></td>
 <td align="left">uri</td>
 <td align="left">uri: 200</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.721</td>
+<td align="right">0.528</td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-uri.R#L27">test-uri.R</a></td>
+<tr class="even">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-uri.R#L27">test-uri.R</a></td>
 <td align="left">uri</td>
 <td align="left">encode: encode character</td>
 <td align="left">PASS</td>
@@ -390,8 +478,8 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <td align="right">0.002</td>
 <td align="left"></td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-uri.R#L31">test-uri.R</a></td>
+<tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-uri.R#L31">test-uri.R</a></td>
 <td align="left">uri</td>
 <td align="left">encode: no encode character</td>
 <td align="left">PASS</td>
@@ -399,80 +487,80 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <td align="right">0.001</td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-uri.R#L37">test-uri.R</a></td>
+<tr class="even">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-uri.R#L37">test-uri.R</a></td>
 <td align="left">uri</td>
 <td align="left">tiny: valid tiny</td>
-<td align="left">PASS</td>
-<td align="right">1</td>
-<td align="right">0.620</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-uri.R#L42">test-uri.R</a></td>
-<td align="left">uri</td>
-<td align="left">tiny: clipboard</td>
 <td align="left">SKIPPED</td>
 <td align="right">1</td>
 <td align="right">0.001</td>
 <td align="left">🔶</td>
 </tr>
 <tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-uri.R#">test-uri.R</a></td>
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-uri.R#L43">test-uri.R</a></td>
+<td align="left">uri</td>
+<td align="left">tiny: clipboard</td>
+<td align="left">SKIPPED</td>
+<td align="right">1</td>
+<td align="right">0.002</td>
+<td align="left">🔶</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-uri.R#">test-uri.R</a></td>
 <td align="left">uri</td>
 <td align="left">bad template: error uri</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.003</td>
+<td align="right">0.248</td>
 <td align="left"></td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-yml.R#L24">test-yml.R</a></td>
+<tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-yml.R#L24">test-yml.R</a></td>
 <td align="left">yml</td>
 <td align="left">yaml fields: rgba</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.006</td>
+<td align="right">0.525</td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-yml.R#L29">test-yml.R</a></td>
+<tr class="even">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-yml.R#L29">test-yml.R</a></td>
 <td align="left">yml</td>
 <td align="left">yaml fields: template</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.003</td>
+<td align="right">0.432</td>
 <td align="left"></td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-yml.R#L34">test-yml.R</a></td>
+<tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-yml.R#L34">test-yml.R</a></td>
 <td align="left">yml</td>
 <td align="left">yaml fields: bad font family</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.002</td>
+<td align="right">0.439</td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-yml.R#L39">test-yml.R</a></td>
+<tr class="even">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-yml.R#L39">test-yml.R</a></td>
 <td align="left">yml</td>
 <td align="left">yaml fields: pv</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.002</td>
+<td align="right">0.522</td>
 <td align="left"></td>
 </tr>
-<tr class="even">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-yml.R#L44">test-yml.R</a></td>
+<tr class="odd">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-yml.R#L44">test-yml.R</a></td>
 <td align="left">yml</td>
 <td align="left">yaml fields: ph</td>
 <td align="left">PASS</td>
 <td align="right">1</td>
-<td align="right">0.002</td>
+<td align="right">0.431</td>
 <td align="left"></td>
 </tr>
-<tr class="odd">
-<td align="left"><a href="https://github.com/yonicd/carbonate/tree/master/tests/testthat/test-yml.R#L59">test-yml.R</a></td>
+<tr class="even">
+<td align="left"><a href="https://github.com/yonicd/carbonate/blob/master/tests/testthat/test-yml.R#L59">test-yml.R</a></td>
 <td align="left">yml</td>
 <td align="left">namesless palette: fill in palette</td>
 <td align="left">PASS</td>
@@ -500,7 +588,9 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 </table>
 </details>
 <details>
-<p><summary> Session Info </summary></p>
+<summary>
+Session Info
+</summary>
 <table>
 <thead>
 <tr class="header">
@@ -511,15 +601,15 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <tbody>
 <tr class="odd">
 <td align="left">Version</td>
-<td align="left">R version 3.5.1 (2018-07-02)</td>
+<td align="left">R version 4.2.1 (2022-06-23)</td>
 </tr>
 <tr class="even">
 <td align="left">Platform</td>
-<td align="left">x86_64-apple-darwin15.6.0 (64-bit)</td>
+<td align="left">x86_64-apple-darwin17.0 (64-bit)</td>
 </tr>
 <tr class="odd">
 <td align="left">Running</td>
-<td align="left">macOS 10.14.2</td>
+<td align="left">macOS Big Sur 11.6</td>
 </tr>
 <tr class="even">
 <td align="left">Language</td>
@@ -527,7 +617,7 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 </tr>
 <tr class="odd">
 <td align="left">Timezone</td>
-<td align="left">America/Chicago</td>
+<td align="left">America/New_York</td>
 </tr>
 </tbody>
 </table>
@@ -541,15 +631,15 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 <tbody>
 <tr class="odd">
 <td align="left">testthat</td>
-<td align="left">2.0.0.9000</td>
+<td align="left">3.1.4</td>
 </tr>
 <tr class="even">
 <td align="left">covr</td>
-<td align="left">3.2.0</td>
+<td align="left">3.5.1</td>
 </tr>
 <tr class="odd">
 <td align="left">covrpage</td>
-<td align="left">0.0.69</td>
+<td align="left">0.1</td>
 </tr>
 </tbody>
 </table>
